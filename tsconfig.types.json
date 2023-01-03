@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./lib",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "paths": {
+      "webp-converter-browser/*": ["./src/*"],
+      "webp-converter-browser": ["./src/index.ts"]
+    }
+  },
+  "files": [
+    "./src/index.ts",
+  ],
+  "exclude": ["./src/**/*"]
+}

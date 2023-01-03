@@ -1,0 +1,35 @@
+name: Deploy Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-package:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: antongolub/action-setup-bun@v1
+        with:
+          bun-version: 0.4.0
+          bun-config: '{"install": {"production": false}}'
+          cache: true
+          cache-bin: true
+
+      - uses: actions/cache@v3
+        id: bun-cache
+        with:
+          path: ./node_modules
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          restore-keys: ${{ runner.os }}-bun-
+
+      - run: bun install
+        if: ${{ steps.bun-cache.outputs.cache-hit != 'true' }}
+
+      - run: bun run build
+
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
