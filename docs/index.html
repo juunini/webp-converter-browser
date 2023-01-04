@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://juunini.github.io/webp-converter-browser">
+  <meta property="og:title" content="Online WebP Converter">
+  <meta property="og:image" content="https://repository-images.githubusercontent.com/584793683/0db86c0f-83ac-4387-991c-9ab84ba2e60c">
+  <meta property="og:description" content="Convert your image to WebP">
+  <meta property="og:site_name" content="Online WebP Converter">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image:width" content="1204">
+  <meta property="og:image:height" content="576">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@juunini">
+  <meta name="twitter:creator" content="@juunini">
+  <meta name="twitter:title" content="Online WebP Converter">
+  <meta name="twitter:description" content="Convert your image to WebP">
+  <meta name="twitter:image" content="https://repository-images.githubusercontent.com/584793683/0db86c0f-83ac-4387-991c-9ab84ba2e60c">
+  <meta name="twitter:image:alt" content="Online WebP Converter">
+  <meta name="description" content="Convert your image to WebP">
+  <meta name="keywords" content="webp, converter, image, online, browser">
+  <meta name="author" content="juunini">
+  <meta name="application-name" content="Online WebP Converter">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/webp-converter-browser@latest/dist/index.min.js"></script>
+  <title>Online WebP Converter</title>
+</head>
+<body class="relative flex flex-col justify-center items-center max-w-7xl m-auto pb-14">
+  <h1 class="text-center w-full mb-8 p-14 text-white text-3xl font-bold">
+    Online WebP Converter
+  </h1>
+
+  <a href="https://github.com/juunini/webp-converter-browser" target="_new" id="githubLink">
+    Link to <img src="./github-mark.png" alt="GitHub" />
+  </a>
+
+  <form class="flex items-center space-x-6 mb-7">
+    <label class="block" for="given">
+      <span class="sr-only">Choose image</span>
+      <input
+        type="file"
+        id="given"
+        accept="image/*"
+        multiple="false"
+        class="block w-full text-sm text-slate-500
+          file:mr-4 file:py-2 file:px-4
+          file:rounded-full file:border-0
+          file:text-sm file:font-semibold
+          file:bg-violet-50 file:text-violet-700
+          hover:file:bg-violet-100
+        "
+      />
+    </label>
+  </form>
+
+  <hr />
+
+  <section class="flex flex-row justify-center items-center w-full mb-7">
+    <label for="quality" class="range">
+      <p>Quality: <span id="qualityValue">75</span></p>
+      <input type="range" id="quality" min="0" max="100" value="75" class="range" />
+    </label>
+  </section>
+
+  <hr />
+
+  <section class="flex flex-row justify-center items-center mb-7 px-5">
+    <label for="width" class="block mr-8">
+      <span class="text-sm font-medium text-slate-70 mr-2">Width:</span>
+      <input type="number" id="width" min="0" value="" class="placeholder:italic placeholder:text-slate-400 bg-white w-24 md:w-12 border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 md:text-sm" />
+    </label>
+
+    <form>
+      <label for="height" class="block">
+        <span class="text-sm font-medium text-slate-70 mr-2">Height:</span>
+        <input type="number" id="height" min="0" value="" class="placeholder:italic placeholder:text-slate-400 bg-white w-24 md:w-12 border border-slate-300 rounded-md py-2 pl-3 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 md:text-sm" />
+      </label>
+    </form>
+  </section>
+
+  <hr />
+
+  <button type="button" id="download" class="button">
+    <span>Download</span>
+  </button>
+  <p id="warning" class="hidden text-red-500">Please select a file first</p>
+
+  <article class="overflow-auto w-full">
+    <img id="img" src="" alt="" class="max-w-none" />
+  </article>
+
+  <script>
+    
+  </script>
+</body>
+<link rel="stylesheet" href="./index.css">
+<link rel="stylesheet" href="./github-link.css">
+<link rel="stylesheet" href="./button.css">
+<link rel="stylesheet" href="./input-range.css">
+<script src="./index.js"></script>
+</html>

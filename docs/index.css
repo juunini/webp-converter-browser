@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+h1 {
+  background: url(https://repository-images.githubusercontent.com/584793683/0db86c0f-83ac-4387-991c-9ab84ba2e60c) no-repeat center center / cover;
+  text-shadow: 0 0 3px #000;
+}
+
+hr {
+  width: 100%;
+  margin-bottom: 30px;
+}

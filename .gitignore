@@ -7,7 +7,6 @@
 !/.gitignore
 !/.npmignore
 !/.github
-!/.nojekyll
 
 !/LICENSE
 !/README.md
@@ -19,5 +18,5 @@
 
 !/tsconfig.json
 !/tsconfig.types.json
-!/index.html
-!/favicon.ico
+
+!/docs
