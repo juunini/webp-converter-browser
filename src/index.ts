@@ -26,7 +26,7 @@ export function srcToWebP(
       // @ts-ignore
       URL.revokeObjectURL(e.target.src);
       // @ts-ignore
-      context.drawImage(e.target, 0, 0);
+      context.drawImage(e.target, 0, 0, canvas.width, canvas.height);
       canvas.toBlob((data) => {
         resolve(data as Blob);
       }, 'image/webp', quality || DEFAULT_QUALITY);
