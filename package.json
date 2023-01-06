@@ -1,8 +1,19 @@
 {
   "name": "webp-converter-browser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Convert image to webp in browser side",
   "homepage": "https://juunini.github.io/webp-converter-browser",
+  "repository": "juunini/webp-converter-browser",
+  "license": "MIT",
+  "author": "juunini",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "unpkg": "dist/index.min.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
     "test:eslint": "eslint --ext .ts,.tsx ./src",
     "build": "bun run build:commonjs && bun run build:es && bun run build:umd && bun run build:types",
@@ -12,8 +23,6 @@
     "build:types": "rimraf './lib/**/*.d.ts' && tsc --project ./tsconfig.types.json",
     "format": "bun run test:eslint --fix"
   },
-  "repository": "juunini/webp-converter-browser",
-  "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.5",
