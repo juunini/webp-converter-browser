@@ -4,7 +4,7 @@ interface Options {
   height?: number
 }
 
-const DEFAULT_QUALITY = 75;
+const DEFAULT_QUALITY = 0.75;
 
 /**
  * When it cause CORS, you may failed to use
