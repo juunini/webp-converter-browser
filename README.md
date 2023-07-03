@@ -80,8 +80,8 @@ const webpBlob = await arrayBufferToWebP(jpgArrayBuffer, { /** options */ })
 
 ## Options
 
-| Name | Description | Default |
-|-|-|-|
-| quality | image quality | 75 |
-| width | image width | Given image width |
+| Name | Description | Default            |
+|-|-|--------------------|
+| quality | image quality | 0.75               |
+| width | image width | Given image width  |
 | height | image height | Given image height |
