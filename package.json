@@ -1,6 +1,6 @@
 {
   "name": "webp-converter-browser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert image to webp in browser side",
   "homepage": "https://juunini.github.io/webp-converter-browser",
   "repository": "juunini/webp-converter-browser",
